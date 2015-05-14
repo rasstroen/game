@@ -1,0 +1,18 @@
+.container {
+	background: #fff;
+	width: 827px;
+	height: 500px;
+	position: relative;
+}
+
+.container .content {
+	display: inline-block;
+	width:623px;
+}
+
+.container .sidebar {
+	display: inline-block;
+	width: 200px;
+	height: 498px;
+	border: 1px solid #000;
+}

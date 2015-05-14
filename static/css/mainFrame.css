@@ -1,0 +1,33 @@
+.container {
+	background: #f0f0f0;
+	width: 827px;
+	height: 600px;
+	padding: 0;
+	margin: 0;
+	position: relative;
+}
+
+.content {
+	width: 827px;
+	height: 500px;
+}
+
+.header {
+	height: 100px;
+	position: relative;
+}
+
+.plank ul{
+	padding: 0;
+	margin: 0;
+}
+
+.plank .production {
+	margin: 0;
+	padding: 0;
+}
+
+.plank .production li {
+	display: inline-block;
+	list-style: none;
+}
