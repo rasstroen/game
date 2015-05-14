@@ -4,6 +4,7 @@ function templateHtmlShowMain(array $data)
 	?>
 	<div class="header">
 		<div class="plank">
+			<div class="user"></div>
 			<ul class="links">
 				<li>
 					<a target="inner" href="/start">шахты</a>
@@ -28,8 +29,18 @@ function templateHtmlShowMain(array $data)
 	</div>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 	<script src="/js/main.js"></script>
-	<script>
-		game.start();
+	<script src="//vk.com/js/api/xd_connection.js?2"  type="text/javascript">
+
+	</script>
+	<script type="text/javascript">
+		$(function(){
+			VK.init(function() {
+				game.start();
+			}, function() {
+				// API initialization failed
+				// Can reload page here
+			}, '5.32');
+		});
 	</script>
 <?php
 }

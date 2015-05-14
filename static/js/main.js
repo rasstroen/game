@@ -1,9 +1,18 @@
 var resources = {'clay':1,'crop':2,'wood':3,'iron':4}
+
 var game = {
 	lastCalculateTime: 0,
+	socialProfile : {},
 	/** main screen **/
 	start: function () {
-		console.log(this.resources)
+
+		VK.api('users.get',{fields: 'photo_50'},function(data) {
+			if (data.response) {
+				this.socialProfile = data.response[0];
+				$('.user').show().css('background-image',  'url(' + this.socialProfile.photo_50 + ')');
+			}
+		});
+
 		this.refreshDataFromServer();
 		this.timer();
 	},
@@ -46,13 +55,13 @@ var game = {
 		}
 		if(period)
 		{
-			console.log(period)
+			//console.log(period)
 			for(var i in resources) {
 				var current = $('.production .' + i + ' .value').val();
 				var energy = $('.production .' + i + ' .energy').val();
 				var add = energy * period / 1000 / 60 / 60;
 				var newValue = current - 0 + add - 0;
-				console.log(current + '+' + add + '=' + newValue + ', e=' + energy);
+				//console.log(current + '+' + add + '=' + newValue + ', e=' + energy);
 				$('.production .' + i + ' .value').val(newValue);
 				$('.production .' + i + ' span').text(Math.round(newValue));
 			}

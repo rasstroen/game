@@ -1,18 +1,23 @@
 .container {
 	background: #fff;
-	width: 800px;
-	height: 600px;
+	width: 827px;
+	height: 500px;
 	position: relative;
+}
+.container{
+	vertical-align: top;
 }
 
 .container .content {
 	display: inline-block;
-	width:580px;
+	width:600px;
 }
 
 .container .sidebar {
+	position: relative;
 	display: inline-block;
-	width: 200px;
-	height: 588px;
+	width: 225px;
+	height: 488px;
 	border: 1px solid #000;
+	float: right;
 }

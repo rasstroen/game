@@ -1,6 +1,6 @@
 .container {
 	background: #f0f0f0;
-	width: 800px;
+	width: 827px;
 	height: 600px;
 	padding: 0;
 	margin: 0;
@@ -8,7 +8,7 @@
 }
 
 .content {
-	width: 800px;
+	width: 827px;
 	height: 600px;
 }
 
@@ -17,7 +17,7 @@
 	position: relative;
 }
 
-.plank ul{
+.plank ul {
 	padding: 0;
 	margin: 0;
 }
@@ -30,4 +30,13 @@
 .plank .production li {
 	display: inline-block;
 	list-style: none;
+}
+
+.user {
+	top:25px;
+	right:25px;
+	position: absolute;
+	width: 50px;
+	height: 50px;
+	display: none;
 }
