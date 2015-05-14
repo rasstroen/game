@@ -59,7 +59,7 @@ $hamstersBuildings = array(
 		'time'        => 40,
 		'culture'     => 1,
 		'defence'     => 0,
-		'energy'      => 6  
+		'energy'      => 6
 	),
 	$buildingTypeCrop => array(
 		'class'       => 'CropProduction',

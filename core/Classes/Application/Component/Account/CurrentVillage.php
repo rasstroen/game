@@ -144,7 +144,7 @@ class CurrentVillage extends Base
 				$availableToBuildFarms[$slotId]['energy_next']  = $this->mult($libBuilding['energy'], $libBuilding['multi'], $existFarms[$slotId] + 1);
 				$availableToBuildFarms[$slotId]['culture_next'] = $this->mult($libBuilding['culture'], $libBuilding['multi'], $existFarms[$slotId] + 1);
 				$availableToBuildFarms[$slotId]['defence_next'] = $this->mult($libBuilding['defence'], $libBuilding['multi'], $existFarms[$slotId] + 1);
-				$availableToBuildFarms[$slotId]['time_next']    = $this->mult($libBuilding['time'], $libBuilding['multi'], $existFarms[$slotId]);
+				$availableToBuildFarms[$slotId]['time_next']    = $this->mult($libBuilding['time'], $libBuilding['multi'], $existFarms[$slotId] + 1);
 
 			}
 			else
