@@ -3,6 +3,11 @@ namespace Application\BLL;
 
 class Village extends BLL
 {
+	const RESOURCE_TYPE_CLAY = 0;
+	const RESOURCE_TYPE_CROP = 1;
+	const RESOURCE_TYPE_WOOD = 2;
+	const RESOURCE_TYPE_IRON = 3;
+
 	private $cachedVillages = array();
 
 	public function getVillage($villageId)

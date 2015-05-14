@@ -2,6 +2,7 @@
 
 namespace Application\Component\Account;
 
+use Application\BLL\Village;
 use Application\Component\Base;
 
 class CurrentVillage extends Base
@@ -10,11 +11,12 @@ class CurrentVillage extends Base
 	 * @var Current
 	 */
 	private $currentAccount;
+
 	public $resourceName = array(
-		'0' => 'clay',
-		'1' => 'crop',
-		'2' => 'wood',
-		'3' => 'iron'
+		Village::RESOURCE_TYPE_CLAY => 'clay',
+		Village::RESOURCE_TYPE_CROP => 'crop',
+		Village::RESOURCE_TYPE_WOOD => 'wood',
+		Village::RESOURCE_TYPE_IRON => 'iron'
 	);
 
 	public function initialize()
@@ -24,13 +26,14 @@ class CurrentVillage extends Base
 
 	public function getProduction()
 	{
-		$out = array();
+		$out        = array();
 		$production = $this->application->bll->village->getProduction($this->currentAccount->getCurrentVillageId());
 		$this->recalculateProduction($production);
 		foreach($production as $key => $value)
 		{
 			$out[$this->resourceName[$key]] = $value;
 		}
+
 		return $out;
 	}
 
@@ -43,12 +46,13 @@ class CurrentVillage extends Base
 
 	public function getProductionEnergy()
 	{
-		$out = array();
+		$out              = array();
 		$productionEnergy = $this->application->bll->village->getProductionEnergy($this->currentAccount->getCurrentVillageId());
 		foreach($productionEnergy as $key => $value)
 		{
 			$out[$this->resourceName[$key]] = $value;
 		}
+
 		return $out;
 	}
 

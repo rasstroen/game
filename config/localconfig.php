@@ -22,5 +22,8 @@ return array(
 	),
 	'components'    => require_once 'components.php',
 	'bll'           => require_once 'bll.php',
-	'routing'       => require_once 'routing.php'
+	'routing'       => require_once 'routing.php',
+	'libs'  => array(
+		'buildings' => require_once 'buildings.php'
+	)
 );
