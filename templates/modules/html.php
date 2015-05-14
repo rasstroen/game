@@ -37,8 +37,7 @@ function templateHtmlShowMain(array $data)
 			VK.init(function() {
 				game.start();
 			}, function() {
-				// API initialization failed
-				// Can reload page here
+				game.start();
 			}, '5.32');
 		});
 	</script>

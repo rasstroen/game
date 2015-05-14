@@ -8,6 +8,10 @@ class Base extends \Application\Component\Base
 {
 	private $configuration;
 
+	public function getLibrary($libraryName)
+	{
+		return $this->configuration['libs'][$libraryName];
+	}
 	/**
 	 * @param array $configuration
 	 */

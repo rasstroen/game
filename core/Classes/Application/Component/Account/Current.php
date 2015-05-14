@@ -14,6 +14,11 @@ class Current extends Base
 
 	}
 
+	public function getRaceName()
+	{
+		return 'hamsters';
+	}
+
 	public function getCurrentVillageId()
 	{
 		return 1;

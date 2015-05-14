@@ -14,7 +14,7 @@ $modules = array(
 		'mode'      => 'method'
 	),
 	'farms'      => array(
-		'className' => '\Application\Module\Html\Farms',
+		'className' => '\Application\Module\Village\Farms',
 		'template'  => 'farms',
 		'action'    => 'show',
 		'mode'      => 'farms'

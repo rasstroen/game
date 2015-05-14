@@ -19,13 +19,16 @@
 $buildingTypeMain = 1;
 $buildingTypeClay = 2;
 $buildingTypeCrop = 3;
+$buildingTypeWood = 4;
+$buildingTypeIron = 5;
 
 /**
  * хомячьи постройки
  */
 $hamstersBuildings = array(
 	$buildingTypeMain => array(
-		'name'        => 'Пещера рабов',
+		'class'       => 'WorkersHome',
+		'title'       => 'Пещера рабов',
 		'description' => 'В пещере рабов содержатся самые неудачливые хомяки из низших сословий. Именно они херачат все постройки в городе.
 		Каждый уровень пещеры рабов добавляет одно койкоместо, что сокращает время постройки новых зданий на 2%',
 		'max_level'   => 40,
@@ -35,14 +38,15 @@ $hamstersBuildings = array(
 			100,
 			20
 		),
-		'multi'       => 2.1,
+		'multi'       => 1.21,
 		'time'        => 60,
 		'culture'     => 2,
 		'defence'     => 1,
-		'energy'      => 1
+		'energy'      => 10
 	),
 	$buildingTypeClay => array(
-		'name'        => 'Фильтронасосная очистная станция при клозетах',
+		'class'       => 'ClayProduction',
+		'title'       => 'Фильтронасосная очистная станция при клозетах',
 		'description' => 'В станцию входит труба. Выходит нечто, что рабы называют "глиной", но мы-то знаем. Из "глины" строятся основные постройки.',
 		'max_level'   => 20,
 		'cost'        => array(
@@ -51,15 +55,50 @@ $hamstersBuildings = array(
 			140,
 			30
 		),
+		'multi'       => 1.7,
+		'time'        => 40,
+		'culture'     => 1,
+		'defence'     => 0,
+		'energy'      => 6  
+	),
+	$buildingTypeCrop => array(
+		'class'       => 'CropProduction',
+		'title'       => 'Колхоз',
+		'description' => 'В колхозе крепостные хомяки занимаются выращиванием зерна. С каждым уровнем колхоза используется больше ГМО',
+		'max_level'   => 20,
+		'cost'        => array(
+			150,
+			20,
+			100,
+			100
+		),
 		'multi'       => 1.5,
 		'time'        => 40,
 		'culture'     => 1,
 		'defence'     => 0,
 		'energy'      => 1
 	),
-	$buildingTypeCrop => array(
-		'name'        => 'Колхоз',
-		'description' => 'В колхозе крепостные хомяки занимаются выращиванием зерна. С каждым уровнем колхоза используется больше ГМО',
+	$buildingTypeWood => array(
+		'class'       => 'WoodProduction',
+		'title'       => 'todo wood',
+		'description' => 'todo wood',
+		'max_level'   => 20,
+		'cost'        => array(
+			150,
+			20,
+			100,
+			100
+		),
+		'multi'       => 1.5,
+		'time'        => 40,
+		'culture'     => 1,
+		'defence'     => 0,
+		'energy'      => 1
+	),
+	$buildingTypeIron => array(
+		'class'       => 'IronProduction',
+		'title'       => 'todo iron',
+		'description' => 'todo iron',
 		'max_level'   => 20,
 		'cost'        => array(
 			150,

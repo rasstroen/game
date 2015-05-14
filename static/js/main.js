@@ -5,7 +5,6 @@ var game = {
 	socialProfile : {},
 	/** main screen **/
 	start: function () {
-
 		VK.api('users.get',{fields: 'photo_50'},function(data) {
 			if (data.response) {
 				this.socialProfile = data.response[0];
@@ -40,6 +39,7 @@ var game = {
 		$.get('/method/' + method, params, callBack, 'json');
 	},
 	timer: function () {
+		this.recalculateProduction();
 		setInterval(this.recalculateProduction, 1000);
 	},
 	recalculateProduction: function () {
@@ -55,13 +55,11 @@ var game = {
 		}
 		if(period)
 		{
-			//console.log(period)
 			for(var i in resources) {
 				var current = $('.production .' + i + ' .value').val();
 				var energy = $('.production .' + i + ' .energy').val();
 				var add = energy * period / 1000 / 60 / 60;
 				var newValue = current - 0 + add - 0;
-				//console.log(current + '+' + add + '=' + newValue + ', e=' + energy);
 				$('.production .' + i + ' .value').val(newValue);
 				$('.production .' + i + ' span').text(Math.round(newValue));
 			}

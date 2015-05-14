@@ -11,6 +11,8 @@
 .container .content {
 	display: inline-block;
 	width:600px;
+	height: 500px;
+	overflow: auto;
 }
 
 .container .sidebar {
@@ -20,4 +22,12 @@
 	height: 488px;
 	border: 1px solid #000;
 	float: right;
+}
+
+.farms li{
+	color:#999;
+}
+
+.farms li.active{
+	color:#000;
 }

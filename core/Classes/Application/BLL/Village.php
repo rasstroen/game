@@ -64,4 +64,16 @@ class Village extends BLL
 	{
 		return explode('|', $this->getVillageProperty($villageId, 'production_energy'));
 	}
+
+	public function getFarms($villageId)
+	{
+		$farms = explode('|', $this->getVillageProperty($villageId, 'farms'));
+		$out = array();
+		foreach($farms as $farm)
+		{
+			$farm = explode(':', $farm);
+			$out[$farm[0]] = $farm[1];
+		}
+		return $out;
+	}
 }
