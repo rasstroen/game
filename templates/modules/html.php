@@ -21,7 +21,7 @@ function templateHtmlShowMain(array $data)
 		</div>
 	</div>
 	<div class="content">
-		<iframe name="inner" id="inner" frameborder="0" width="100%" height="500px" src="<?= $data['iframe']['src'] ?>"></iframe>
+		<iframe name="inner" id="inner" frameborder="0" width="100%" height="600px" src="<?= $data['iframe']['src'] ?>"></iframe>
 	</div>
 	<div class="friends">
 
